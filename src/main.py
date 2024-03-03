@@ -1,13 +1,16 @@
 """Entrypoint."""
+
 from __future__ import annotations
 
 import uvicorn
 from fastapi import FastAPI
 
+from src.auth.router import auth_router
 from src.notifications.router import notifications_router
 
 app = FastAPI()
 app.include_router(notifications_router)
+app.include_router(auth_router)
 
 
 @app.get("/")
