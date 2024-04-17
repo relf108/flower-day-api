@@ -1,0 +1,19 @@
+{
+  "configurations": [
+    {
+      "type": "python",
+      "request": "launch",
+      "name": "FastAPI",
+      "module": "uvicorn",
+      "args": [
+        "src.main:app",
+        "--reload"
+      ],
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}"
+      },
+      "jinja": true
+      
+    }
+  ]
+}
